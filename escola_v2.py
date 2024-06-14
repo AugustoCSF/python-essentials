@@ -4,7 +4,7 @@
 Imprimir a lista de crianças agrupadas por sala
 que frequentas cada uma das atividades.
 """
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 
 # Dados
 sala1 = ["Erik", "Maia", "Gustavo", "Manuel", "Sofia", "Joana"]
@@ -19,14 +19,9 @@ aula_danca = ["Gustavo", "Sofia", "Joana", "Antonio"]
 atividades = [("Inglês", aula_ingles), ("Música", aula_musica), ("Dança", aula_danca)]
 
 for atividade, aula in atividades:
-    turma_1 = []
-    turma_2 = []
+    turma_1 = set(sala1) & set(aula)
+    turma_2 = set(sala2) & set(aula)
 
-    for aluno in aula:
-        if aluno in sala1:
-            turma_1.append(aluno)
-        elif aluno in sala2:
-            turma_2.append(aluno)
     print(f"Alunos de {atividade}")
     print("Sala 1", turma_1)
     print("Sala 2", turma_2)
