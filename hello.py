@@ -19,11 +19,12 @@ import os
 
 current_lang = os.getenv("LANG", "en_US")[:5]
 
-default = "Hello, World!"
+msg = {
+    "en_US": "Hello, world!",
+    "it_IT": "Ciao, mondo!",
+    "pt_BR": "Olá, mundo!",
+    "fr_FR": "Bonjour, monde!",
+}
 
-if current_lang == "pt_BR":
-    print("Olá, Mundo!")
-elif current_lang == "it_IT":
-    print("Ciao, Mondo!")
-else: 
-    print(default)
+
+print(msg[current_lang])
