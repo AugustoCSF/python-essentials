@@ -1,0 +1,2 @@
+1,Augusto Cesar,5,2500.00
+4,Bruno,3,150.00

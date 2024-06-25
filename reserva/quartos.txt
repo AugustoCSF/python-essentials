@@ -1,0 +1,5 @@
+codigo,quarto,diaria
+1,suite master,500
+2,familia,200
+3,single,100
+4,simples,50
